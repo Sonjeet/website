@@ -5,7 +5,6 @@ import { Navbar } from '../components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import Footer from '../components/footer'
 import { prodUrl } from '../sitemap'
-import { size } from '../og/utils'
 
 export const metadata: Metadata = {
   metadataBase: new URL(prodUrl),
@@ -25,9 +24,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og',
+        url: '/og-image.png',
         alt: 'Your Name (@yourhandle)',
-        ...size,
+        width: 1200,
+        height: 630,
       },
     ],
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Software developer, writer, and digital gardener sharing thoughts on technology and development.',
     site: '@yourhandle',
     creator: '@yourhandle',
-    images: ['/og'],
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,

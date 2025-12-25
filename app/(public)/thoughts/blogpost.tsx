@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation'
 import { formatDate, getBlogPosts } from 'app/(public)/thoughts/utils'
 import { prodUrl } from 'app/sitemap'
 import Prose from 'app/components/prose'
-import { size } from 'app/og/utils'
 import { NewsletterSignupForm } from 'app/components/newsletter-form'
 
 export async function generateStaticParams() {
@@ -16,15 +15,8 @@ export async function generateStaticParams() {
 function generateOgImage(post) {
   if (post.metadata.image) return post.metadata.image
 
-  return `${prodUrl}/og?name=${encodeURIComponent("Sonjeet Paul's Essays")}&title=${encodeURIComponent(
-    post.metadata.title,
-  )}&subtitle=${
-    post.metadata.views > 0
-      ? `${post.metadata.views.toLocaleString(undefined, {
-          maximumFractionDigits: 0,
-        })} views`
-      : ''
-  }`
+  // Use static OG image instead of dynamic generation
+  return `${prodUrl}/og-image.png`
 }
 
 export const generateMeta = (meta) => () => {
@@ -55,7 +47,8 @@ export const generateMeta = (meta) => () => {
       images: [
         {
           url: ogImage,
-          ...size,
+          width: 1200,
+          height: 630,
         },
       ],
     },
