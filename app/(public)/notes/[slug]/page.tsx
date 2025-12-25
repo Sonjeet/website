@@ -180,10 +180,7 @@ export default async function Page({
               <div className="space-y-2">
                 <p className="uppercase font-bold">Reading time</p>
                 <div>
-                  <ReadingTime
-                    readTimeInMinutes={note.metadata.readTimeInMinutes}
-                    domElementId={NOTE_CONTENT_ELEMENT_ID}
-                  />
+                  {/* Reading time removed for simplified version */}
                 </div>
               </div>
               <hr />
@@ -296,8 +293,8 @@ export default async function Page({
           </div>
         </div>
       )}
-      {/* Admin-only: Edit button */}
-      <EditButton cuid={note.metadata.cuid} />
+      {/* Admin-only: Edit button - disabled for local MDX files */}
+      <EditButton cuid="" />
       <FeedbackForm note={note} />
     </section>
   )
