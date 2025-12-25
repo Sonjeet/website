@@ -7,7 +7,6 @@ import remarkGfm from 'remark-gfm'
 import Prose from 'app/components/prose'
 import { prodUrl } from 'app/sitemap'
 import { formatDate } from '../utils'
-import { size } from 'app/og/utils'
 import { EMOJI_FOR_STATUS, getNote, getNotes, type Note } from '../utils'
 import { useMDXComponents } from 'mdx-components'
 import Link from 'next/link'
@@ -56,7 +55,8 @@ export async function generateMetadata({
       images: [
         {
           url: ogImage,
-          ...size,
+          width: 1200,
+          height: 630,
         },
       ],
     },
@@ -324,7 +324,8 @@ function TOCHeading(props: Heading) {
 }
 
 function generateOgImage(note: Note) {
-  return `${prodUrl}/og?name=${encodeURIComponent("Sonjeet Paul's Notes")}&title=${encodeURIComponent(note.metadata.title)}${note.metadata.tags && note.metadata.tags.length > 0 ? `&subtitle=${encodeURIComponent(`${note.metadata.tags?.map((tag) => `🏷️ ${tag.name}`).join(' ')}`)}` : ''}`
+  // Use static OG image instead of dynamic generation
+  return `${prodUrl}/og-image.png`
 }
 
 type Heading = {
