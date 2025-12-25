@@ -180,7 +180,10 @@ export default async function Page({
               <div className="space-y-2">
                 <p className="uppercase font-bold">Reading time</p>
                 <div>
-                  {/* Reading time removed for simplified version */}
+                  <ReadingTime
+                    readTimeInMinutes={note.metadata.readTimeInMinutes}
+                    domElementId={NOTE_CONTENT_ELEMENT_ID}
+                  />
                 </div>
               </div>
               <hr />
