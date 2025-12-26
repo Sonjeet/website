@@ -11,8 +11,8 @@ export default async function Home() {
           <ItemListItem
             left={
               <>
-                Software Developer passionate about{' '}
-                <a href="#">web technologies</a>
+                Software Engineer passionate about making{' '}
+                <a href="#">low-latency systems</a>
               </>
             }
             right={`💻`}
@@ -29,14 +29,14 @@ export default async function Home() {
           <ItemListItem
             left={
               <>
-                Digital gardener cultivating{' '}
+                Digital gardener cultivating seeds of{' '}
                 <Link href="/notes">ideas and explorations</Link>
               </>
             }
             right={`🌱`}
           ></ItemListItem>
           <ItemListItem
-            left={<>Based in [Your Location]</>}
+            left={<>Based in London, UK</>}
             right={`📍`}
           ></ItemListItem>
         </ItemList>

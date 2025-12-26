@@ -12,7 +12,7 @@ export function NewsletterSignupForm({ className = '' }) {
   return (
     <div className={`space-y-2 ${className}`}>
       <form
-        action="https://buttondown.email/api/emails/embed-subscribe/mxstbr"
+        action="#"
         method="post"
         target="popupwindow"
         className="flex flex-row items-center space-x-4 pb-4"
@@ -26,6 +26,7 @@ export function NewsletterSignupForm({ className = '' }) {
         <input type="hidden" value="1" name="embed" />
         <div className="relative">
           <input
+            disabled
             type="submit"
             value="Get notified of new essays"
             className="px-4 h-full py-1 cursor-pointer bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 rounded-xs"

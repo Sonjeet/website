@@ -1,0 +1,65 @@
+import BlogPost from '../blogpost'
+import Browser from '../../../components/browser'
+import Lesson from '../../../components/lesson'
+
+export const meta = {
+  state: 'published',
+  publishedAt: '2019-02-18',
+  title: 'Dummy Blog Bah',
+  summary:
+    'This is my summary blah blah blah',
+  views: 2
+}
+
+import { generateMeta } from '../blogpost'
+export const generateMetadata = generateMeta(meta)
+
+<BlogPost meta={meta}>
+
+This is my summary blah blah blah
+
+# Big header looks like this
+## Header looks like this
+
+Rah hyperlinks? got that -> [a hyperlink](https://www.thetimes.com/imageserver/image/%2F8d870c28-4653-4596-963f-68518834e176.jpg). 
+
+Code snippets look like this (ps: it's a control block i made myself to use for shared_ptr / weak_ptr state management):
+
+```cpp
+#pragma once
+
+#include <memory>
+
+template<typename T, typename Deleter = std::default_delete<T>>
+struct ControlBlock {
+    ControlBlock(Deleter deleter) :
+        ref_count_(1),
+        weak_count_(0),
+        deleter_(deleter) {}
+
+    std::atomic<long> ref_count_;
+    std::atomic<long> weak_count_;
+    Deleter deleter_{};
+};
+```
+
+<Lesson
+  title="Cards"
+  body="Some random card design - why not use it throughout the blog for important highlights?"
+/>
+
+<Lesson
+  title="Anuva wan"
+  body="More and more cards."
+/>
+
+### A tiny paragraph
+How to finish up a dummy blog. Bah. Here's some lorem ipsum i guess.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus urna eu neque porta, quis eleifend arcu lacinia. Phasellus elementum sem suscipit lectus luctus elementum quis et ex. Nullam volutpat tristique neque, quis dignissim orci tempus at. Nunc eget tincidunt magna. Fusce auctor nulla vel turpis laoreet eleifend. Suspendisse a pharetra purus, posuere hendrerit lorem. Vestibulum lobortis, quam in egestas lacinia, sem neque commodo purus, at aliquam nulla urna ut eros. Mauris at est ligula.
+
+Aenean vestibulum orci viverra commodo aliquet. Proin arcu ipsum, semper vitae placerat in, ultrices vitae arcu. Cras vel facilisis nunc, mattis dictum purus. Morbi odio erat, congue eget enim eu, laoreet tempor odio. Sed gravida, erat sed dignissim cursus, arcu sem tempor est, at bibendum odio ligula at leo. Ut dictum maximus euismod. Pellentesque convallis malesuada dolor.
+
+
+
+</BlogPost>
