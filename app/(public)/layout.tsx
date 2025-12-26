@@ -9,7 +9,7 @@ import { prodUrl } from '../sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(prodUrl),
   title: {
-    default: 'Your Name (@yourhandle)',
+    default: 'Sonjeet Paul',
     template: '%s | Your Name (@yourhandle)',
   },
   description:

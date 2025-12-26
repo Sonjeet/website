@@ -39,26 +39,13 @@ export default async function WritingPage() {
       <Prose>
         <h1>Notes</h1>
         <p>
-          This is my <Link href="/notes/digital-garden">digital garden</Link>{' '}
-          where I cultivate my ideas. I share these explorations early, so{' '}
-          <mark>don't expect polished thoughts.</mark> (you can find those in{' '}
-          <Link href="/">my essays</Link>) If an idea is in this digital garden,
-          then it's an idea that tickled my brain in some significant way,
-          something that surprised or influenced me, that I want to explore
-          further.
+          This is my <mark><Link href="https://maggieappleton.com/garden-history">digital garden</Link></mark> where I nurture emerging thoughts. I share these with the wider web, originally in an unpolished state, with the aim to nurture them into a coherent exploration of ideas in the software space.
         </p>
         <p>
-          <mark>
-            If any of these ideas tickle your brain in some way, I want to hear
-            about it
-          </mark>
-          . That kind of conversation is exactly why I{' '}
-          <Link href="/notes/digital-garden#why-publish-it-publicly">
-            default to open
-          </Link>{' '}
-          with these notes! Contact me via{' '}
-          <a href="mailto:contact@mxstbr.com?subject=Digital garden">email</a>{' '}
-          or <a href="https://x.com/mxstbr">Twitter/X DMs</a>.
+          When seedlings get planted here it means the ideas being discussed sparked genuine curiosity in me. I will tend to the garden with the intention of seeing my favourite thoughts blossom into fully-realised insights. My goal for now is to follow Feynmann's idea that <mark><Link href="https://fs.blog/feynman-technique/">teaching something is the best way to truly understand it. </Link></mark>
+        </p>
+        <p>
+          So I write about technical topics in easy to consume content. It's my way of learning while helping others learn too.
         </p>
         <p>
           <em>

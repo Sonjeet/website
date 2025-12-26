@@ -16,9 +16,9 @@ function SubmitButton() {
     <button
       className="text-sm px-4 py-1 shrink-0 bg-slate-900 text-white dark:bg-slate-300 dark:text-slate-900 rounded-md"
       type="submit"
-      disabled={pending}
+      disabled
     >
-      {pending ? 'Sending…' : 'Send to Max ->'}
+      {pending ? 'Sending…' : 'Send to Sonj ->'}
     </button>
   )
 }
